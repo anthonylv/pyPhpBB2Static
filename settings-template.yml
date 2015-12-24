@@ -1,0 +1,12 @@
+phpbb_db:
+    host: localhost
+    username: 
+    password: 
+    database: 
+
+logger:
+    loglevel: warning
+    log_filename: logfile.txt
+    log_max_bytes: 1048576
+    log_backup_count: 5
+    report_filename: report.txt

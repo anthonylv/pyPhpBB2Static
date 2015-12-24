@@ -42,7 +42,6 @@ env/
 export/
 settings.yml
 settings.py
-settings-*
 *.log
 report.txt
 logfile.*
