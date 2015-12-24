@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Forum Index</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" title="A">
+</head>
+<body>
+    <h1 style="text-align:center">{{forum_name}}</h1>
+    <p><a href="../index.html">Back to Forum Index</a><br />
+    <a href="index.html">Back to {{forum_name}} topics</a></p>
+    {% set counter = 0 -%}
+    {% for post in posts -%}
+
+        <div id="{{post['post_id']}}" class="post bg2">
+        <div class="inner"><span class="corners-top"><span></span></span>
+            <div class="postbody">
+            <h3>{{ post['post_subject'] }}</h3>
+            <p class="author"><a href="">Post</a> by <strong><a href="">{{post['username']}}</a></strong> » {{post['posted_time']}}</p> 
+            
+            {{ post['post_text'] }}
+            </div> <!-- /postbody -->
+        </div><!-- /inner -->
+        </div><!-- /post bg2 -->
+
+    {% set counter = counter + 1 -%}
+    {% endfor -%}
+
+</body>
+</html>
